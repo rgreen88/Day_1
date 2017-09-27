@@ -14,17 +14,16 @@ public class CodingTest
         */
 
         Scanner input = new Scanner (System.in);
-
-        int num1 = 3;
-        int num2 = 5;
+        
+        System.out.println("Please enter number: ");
         int num3 = input.nextInt();
 
-        if (num3%num1 == 0)
-            System.out.println("fizz");
-        else if (num3%num2 == 0)
-            System.out.println("fizz");
-        else if (num3%num1 == 0 && num3%num2 == 0)
+        if (num3 % 3 == 0 && num3 % 5 == 0)
             System.out.println("fizzbuzz");
+        else if (num3 % 5 == 0)
+            System.out.println("buzz");
+        else if (num3 % 3 == 0)
+            System.out.println("fizz");
         else
             System.out.println(num3);
 
@@ -41,13 +40,21 @@ public class CodingTest
         aStringArray[2] = "pig";
         aStringArray[3] = "Mona";
         aStringArray[4] = "Equal";
-
-        for( int i = 0; i < 5;)
+        
+        String text = aStringArray[0];
+           
+        for(int n = 0; n < 4; n++)
         {
-            String word = aStringArray[i];
-            if (aStringArray[i] == aStringArray[i+1])
-                System.out.println(aStringArray[i] + " " + word);
-            i++;
+          	if(aStringArray[n] == text)
+           		System.out.println(aStringArray[n] + " " + text);
+          	
+           /* for(int i = 0; i < 4; i++)
+            {
+                if (aStringArray[i] == aStringArray[i+1])
+                    System.out.println(aStringArray[i] + " " + aStringArray[i + 1]);
+        	}*/
+           
+            input.close();
         }
     }
 }
